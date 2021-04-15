@@ -143,6 +143,9 @@ $(document).ready(function () {
     iframe = iframe[0]
     let iframe_src = $(iframe).attr('data-src');
     $(iframe).attr('src', iframe_src);
+    $(iframe).each(function() {
+      this.contentWindow.location.reload(true);
+    });
     return false;
   })
   $('.attainment-modal__close').on('click', function() {
