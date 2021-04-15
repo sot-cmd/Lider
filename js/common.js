@@ -143,7 +143,9 @@ $(document).ready(function () {
     iframe = iframe[0]
     let iframe_src = $(iframe).attr('data-src');
     $(iframe).attr('src', iframe_src);
-    
+    $(iframe).each(function() {
+      this.contentWindow.location.reload(true);
+    });
     return false;
   })
   $('.attainment-modal__close').on('click', function() {
@@ -297,7 +299,49 @@ $(document).ready(function () {
     $('.top-arrow').removeClass('top-arrow-active');
   })
 
-  
+  let $element = $('.advantages');
+  let counter = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element.offset().top
+    if (scroll > offset && counter == 0) {
+      $('.top-arrow').addClass('top-arrow-active');
+      counter = 1;
+    }
+  });
+
+  let $element2 = $('.departure');
+  let counter2 = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element2.offset().top
+    if (scroll > offset && counter2 == 0) {
+      myLoop()
+      counter2 = 1;
+    }
+  });
+
+  let $element3 = $('.services-text');
+  let counter3 = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element3.offset().top
+    if (scroll > offset && counter3 == 0) {
+      myLoop2()
+      counter3 = 1;
+    }
+  });
+
+  let $element4 = $('.consultation');
+  let counter4 = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element4.offset().top
+    if (scroll > offset && counter4 == 0) {
+      myLoop3()
+      counter4 = 1;
+    }
+  });
 
   
   $('.services-block__btn').on('click', function() {
