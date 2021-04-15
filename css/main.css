@@ -2055,6 +2055,9 @@ body .departure-form__btn {
     top: 617px; } }
 
 @media (min-width: 767px) {
+  .leaders .container .arrows-wrapper {
+    top: 444px;
+  }
   .header-menu-mobail {
     display: none; }
   .leaders .arrows-wrapper {
@@ -2067,6 +2070,12 @@ body .departure-form__btn {
 @media (max-width: 767px) {
   .attainment-block-active{
     max-height: 5000px!important;
+  }
+  .services .arrows-left {
+    margin-right: 185px!important;
+  }
+  .leaders .container .arrows-wrapper {
+    top: 444px!important;
   }
   .header-nav{
     position: fixed;
