@@ -1720,6 +1720,12 @@ body .departure-form__btn {
   .attainment-block{
     min-height: 722px;
   }
+  .reviews .col-md-10{
+    padding: 0;
+  }
+  .leaders-pred{
+
+  }
   .questions-list {
     padding-right: 20px; }
   .leaders-block-opened {
@@ -2061,6 +2067,23 @@ body .departure-form__btn {
 @media (max-width: 767px) {
   .attainment-block-active{
     max-height: 5000px!important;
+  }
+  .header-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+  .header-content {
+      padding-top: 98px!important;
+  }
+  .services .arrows-left {
+      margin-right: 215px;
+  }
+  .services-block{
+    min-height: 400px!important;
+  }
+  .services .arrows-wrapper {
+      top: 450px!important;
   }
   body .top-arrow{
     width: 30px;
@@ -2766,6 +2789,22 @@ svg:hover path{
 }
 .anim-6{
   animation-delay: 1s;
+}
+.services .arrows-left {
+  margin-right: 255px;
+}
+.reviews .reviews-slider{
+  -webkit-box-shadow: 0px 30px 30px rgb(159 159 159 / 10%);
+  box-shadow: 0px 30px 30px rgb(159 159 159 / 10%);
+}
+.reviews-slide {
+  box-shadow: none;
+}
+.consultation{
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../img/pen-bg.png');
+  background-position: center;
 }
 /* RESPONSIVE */
 

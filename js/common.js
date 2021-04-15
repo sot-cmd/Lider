@@ -286,53 +286,81 @@ $(document).ready(function () {
     }, 70)
   }
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop() >= 2000) {
-      check_scroll += 1;
-      if (check_scroll == 1) {
-        myLoop();
-      }
-    }
-    if ($(this).scrollTop() >= 3600) {
-      check_scroll2 += 1;
-      if (check_scroll2 == 1) {
-        myLoop2();
-      }
-    }
-    if ($(this).scrollTop() >= 10600) {
-      check_scroll3 += 1;
-      if (check_scroll3 == 1) {
-        myLoop3();
-      }
-    }
-  });
-  
-
-  $('.services-block__btn').on('click', function() {
-    let modal = $('.window-price');
-    let body = $('html')
-    $(modal).addClass('window-price-active');
-    $(body).addClass('body-scroll');
-    return false;
-  })
-
   $('.top-arrow').on('click', function() {
     $('body,html').animate({scrollTop: 0}, 400); 
     $('.top-arrow').removeClass('top-arrow-active');
   })
 
-  var $element = $('.advantages');
+  let $element = $('.advantages');
   let counter = 0;
   $(window).scroll(function() {
-    var scroll = $(window).scrollTop() + $(window).height();
-    //Если скролл до конца елемента
-    //var offset = $element.offset().top + $element.height();
-    //Если скролл до начала елемента
-    var offset = $element.offset().top
-   
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element.offset().top
     if (scroll > offset && counter == 0) {
       $('.top-arrow').addClass('top-arrow-active');
       counter = 1;
     }
   });
+
+  let $element2 = $('.departure');
+  let counter2 = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element2.offset().top
+    if (scroll > offset && counter2 == 0) {
+      myLoop()
+      counter2 = 1;
+    }
+  });
+
+  let $element3 = $('.services-text');
+  let counter3 = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element3.offset().top
+    if (scroll > offset && counter3 == 0) {
+      myLoop2()
+      counter3 = 1;
+    }
+  });
+
+  let $element4 = $('.consultation');
+  let counter4 = 0;
+  $(window).scroll(function() {
+    let scroll = $(window).scrollTop() + $(window).height();
+    let offset = $element4.offset().top
+    if (scroll > offset && counter4 == 0) {
+      myLoop3()
+      counter4 = 1;
+    }
+  });
+
+  
+  $('.services-block__btn').on('click', function() {
+    let modal = $('.window-price');
+    let body = $('html')
+    $(modal).addClass('window-price-active');
+    $(body).addClass('body-scroll');
+    let parent2 = $(this).parent('.services-block')
+    parent2 = $(parent2).parent('.col-md-4')
+    parent2 = parent2[0]
+    let num = $(parent2).attr('data-slick-index');
+    $('.window-price-slider').slick('slickGoTo', num);
+    return false;
+  })
+
+  $('.btn-phone').on('click', function() {
+    let parent_im = $(this).parent('.departure-form-wrapper');
+    input_content = $(parent_im).children('.departure-form__input');
+    input_content = $(input_content).val();
+    input_arr = input_content.split('');
+    num_arr = input_arr.length;
+    if (num_arr == 17) {
+      let mdl = $('.window-phone');
+      $(mdl).removeClass('window-phone-active');;
+      let modal = $('.window-dark');
+      $(modal).addClass('window-dark-active');
+    }
+    return false;
+  })
 });
