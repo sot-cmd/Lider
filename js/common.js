@@ -11,7 +11,17 @@ $(document).ready(function () {
     let num = $(attainment).index(this);
     $(attainment_content[num]).addClass('attainment-block-active');
   })
-
+  $('.attainment-block-button').on('click', function() {
+    let block = $('.attainment-block');
+    if ($(block).hasClass('attainment-block-active')) {
+      $(block).removeClass('attainment-block-active');
+      $(block).removeClass('attainment-block-active_n');
+    }
+    else{
+      $(block).addClass('attainment-block-active');
+      $(block).addClass('attainment-block-active_n');
+    }
+  })
   let attainment2 = $('.attainment-list-item');
   let attainment_content2 = $('.atm-m');
   $(attainment).on('click', function() {
@@ -305,4 +315,24 @@ $(document).ready(function () {
     $(body).addClass('body-scroll');
     return false;
   })
+
+  $('.top-arrow').on('click', function() {
+    $('body,html').animate({scrollTop: 0}, 400); 
+    $('.top-arrow').removeClass('top-arrow-active');
+  })
+
+  var $element = $('.advantages');
+  let counter = 0;
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop() + $(window).height();
+    //Если скролл до конца елемента
+    //var offset = $element.offset().top + $element.height();
+    //Если скролл до начала елемента
+    var offset = $element.offset().top
+   
+    if (scroll > offset && counter == 0) {
+      $('.top-arrow').addClass('top-arrow-active');
+      counter = 1;
+    }
+  });
 });
