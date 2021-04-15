@@ -2074,6 +2074,9 @@ body .departure-form__btn {
   .services .arrows-left {
     margin-right: 185px!important;
   }
+  .window-block-phone .departure-form__input{
+    max-width: 249px;
+  }
   .leaders .container .arrows-wrapper {
     top: 444px!important;
   }

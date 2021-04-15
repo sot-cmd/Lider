@@ -138,6 +138,11 @@ $(document).ready(function () {
     $(child).addClass('attainment-modal-dark-active');
     let body = $('html')
     $(body).addClass('body-scroll');
+    let iframe = $(child).children('.attainment-modal');
+    iframe = $(iframe).children('iframe');
+    iframe = iframe[0]
+    let iframe_src = $(iframe).attr('data-src');
+    $(iframe).attr('src', iframe_src);
     return false;
   })
   $('.attainment-modal__close').on('click', function() {
@@ -363,4 +368,6 @@ $(document).ready(function () {
     }
     return false;
   })
+
+
 });
