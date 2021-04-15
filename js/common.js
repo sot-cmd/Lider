@@ -1,5 +1,4 @@
 $(document).ready(function () {
-  new WOW().init();
   let questions_content = $('.questions-block__text');
   let questions = $('.questions-list__item');
   let attainment = $('.attainment-list-item');
