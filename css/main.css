@@ -1428,11 +1428,11 @@
     -webkit-transform: translateX(0px);
             transform: translateX(0px); }
   30% {
-    -webkit-transform: translate(600px, 100px);
-            transform: translate(600px, 100px); }
+    -webkit-transform: translate(1000px, 100px);
+            transform: translate(1000px, 100px); }
   50% {
-    -webkit-transform: translate(1060px, 610px);
-            transform: translate(1060px, 610px); }
+    -webkit-transform: translate(1060px, 810px);
+            transform: translate(1060px, 810px); }
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -1446,11 +1446,11 @@
     -webkit-transform: translateX(0px);
             transform: translateX(0px); }
   30% {
-    -webkit-transform: translate(600px, 100px);
-            transform: translate(600px, 100px); }
+    -webkit-transform: translate(800px, 100px);
+            transform: translate(800px, 100px); }
   50% {
-    -webkit-transform: translate(1060px, 610px);
-            transform: translate(1060px, 610px); }
+    -webkit-transform: translate(1060px, 810px);
+            transform: translate(1060px, 810px); }
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -2070,6 +2070,9 @@ body .departure-form__btn {
 @media (max-width: 767px) {
   .attainment-block-active{
     max-height: 5000px!important;
+  }
+  .header-gif{
+    display: none;
   }
   .services .arrows-left {
     margin-right: 185px!important;
@@ -2818,6 +2821,22 @@ svg:hover path{
   background-attachment: fixed;
   background-image: url('../img/pen-bg.png');
   background-position: center;
+}
+.header-gif{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.mail-to{
+  color: #99A8B6
+}
+.consultation{
+  background: #003C73;
+  background-size: auto;
+  background-attachment: fixed;
+  background-image: url(../img/pen-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /* RESPONSIVE */
 
