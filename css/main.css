@@ -1000,7 +1000,7 @@
 
 .attainment-block {
   height: 100%;
-  max-height: 722px;
+  max-height: 626px;
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   overflow: visible; }
 
@@ -2074,6 +2074,9 @@ body .departure-form__btn {
   .services .arrows-left {
     margin-right: 185px!important;
   }
+  .window-block-phone .departure-form__input{
+    max-width: 249px;
+  }
   .leaders .container .arrows-wrapper {
     top: 444px!important;
   }
@@ -2746,6 +2749,7 @@ textarea {
 .attainment-block{
   overflow: hidden;
 }
+
 .top-arrow{
   position: fixed;
   right: 10%;
