@@ -1,5 +1,25 @@
 $(document).ready(function () {
   if ($(window).width() < 767) {
+    $('.leaders-slider').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      dots: false,
+      focusOnSelect: true,
+      prevArrow: $('.arrows-left-leaders'),
+      nextArrow:$('.arrows-right-leaders'),
+      centerMode: true,
+      variableWidth: true,
+      responsive: [{
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        }
+      }]
+    });
      $('.attainment-list-item').on('click', function() {
        let index_element = $(this).index('.attainment-list-item');
        let element = $('.attainment-block-list')[index_element];
@@ -109,11 +129,6 @@ $(document).ready(function () {
   let i2 = 0;
   let text_area_content_new2 = '';
 
-  let text_area3 = $('.departure-form__textarea')[2];
-  text_area_content3 = text_area3.getAttribute("placeholder");
-  text_area_content3 = text_area_content3.split('');
-  let i3 = 0;
-  let text_area_content_new3 = '';
   $('.header-menu-mobail__button').on('click', function() {
     let menu = $('.header-nav');
     $(menu).addClass('menu-mobail-active');
@@ -202,26 +217,7 @@ $(document).ready(function () {
     nextArrow:$('.arrows-right-reviews'),
     adaptiveHeight: true
   });
-  $('.leaders-slider').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    dots: false,
-    focusOnSelect: true,
-    prevArrow: $('.arrows-left-leaders'),
-    nextArrow:$('.arrows-right-leaders'),
-    centerMode: true,
-    variableWidth: true,
-    responsive: [{
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true,
-      }
-    }]
-  });
+  
   $('.partners-slider').slick({
     slidesToShow: 3,
     centerMode: true,
@@ -287,16 +283,6 @@ $(document).ready(function () {
     }, 70)
   }
 
-  function myLoop3() {
-    setTimeout(function() {
-      text_area_content_new3 = text_area_content_new3 + text_area_content3[i3]
-      $(text_area3).attr("placeholder", text_area_content_new3);
-      i3++;
-      if (i3 < text_area_content3.length) {
-        myLoop3();
-      }
-    }, 70)
-  }
 
   $('.top-arrow').on('click', function() {
     $('body,html').animate({scrollTop: 0}, 400); 
@@ -325,16 +311,6 @@ $(document).ready(function () {
     }
   });
 
-  let $element3 = $('.services-text');
-  let counter3 = 0;
-  $(window).scroll(function() {
-    let scroll = $(window).scrollTop() + $(window).height();
-    let offset = $element3.offset().top
-    if (scroll > offset && counter3 == 0) {
-      myLoop2()
-      counter3 = 1;
-    }
-  });
 
   let $element4 = $('.consultation');
   let counter4 = 0;
@@ -342,7 +318,7 @@ $(document).ready(function () {
     let scroll = $(window).scrollTop() + $(window).height();
     let offset = $element4.offset().top
     if (scroll > offset && counter4 == 0) {
-      myLoop3()
+      myLoop2()
       counter4 = 1;
     }
   });

@@ -6,7 +6,9 @@
 .header-content {
   padding-bottom: 80px;
   position: relative;
-  background: #EFEFEE; }
+  background: linear-gradient(90deg, #FFFFFF 0%, #F3F3F3 100%);
+  overflow: hidden!important;
+  }
 
 .header-video {
   position: absolute;
@@ -694,7 +696,7 @@
       -ms-flex-pack: center;
           justify-content: center; }
   .leaders-block img {
-    max-width: 255px;
+    max-width: 350px;
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease; }
@@ -709,10 +711,10 @@
   min-height: 570px;
   margin: 0 25px; }
 
-.slick-center .leaders-block:hover .leaders-block-opened {
+.leaders-block:hover .leaders-block-opened {
   opacity: 1; }
 
-.slick-center .leaders-block:hover img {
+.leaders-block:hover img {
   opacity: 0; }
 
 .leaders-block-opened {
@@ -1414,7 +1416,7 @@
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  left: -260px;
+  right: -150px;
   top: 90px; }
 
 .contacts-block {
@@ -1427,12 +1429,10 @@
             transform: translateY(0px);
     -webkit-transform: translateX(0px);
             transform: translateX(0px); }
-  30% {
-    -webkit-transform: translate(1000px, 100px);
-            transform: translate(1000px, 100px); }
+  
   50% {
-    -webkit-transform: translate(1060px, 810px);
-            transform: translate(1060px, 810px); }
+    -webkit-transform: translate(-1060px, 0px);
+            transform: translate(-1060px, 0px); }
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -1445,12 +1445,10 @@
             transform: translateY(0px);
     -webkit-transform: translateX(0px);
             transform: translateX(0px); }
-  30% {
-    -webkit-transform: translate(800px, 100px);
-            transform: translate(800px, 100px); }
+  
   50% {
-    -webkit-transform: translate(1060px, 810px);
-            transform: translate(1060px, 810px); }
+    -webkit-transform: translate(-1060px, 0px);
+            transform: translate(-1060px, 0px); }
   100% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -1720,6 +1718,15 @@ body .departure-form__btn {
   .attainment-block{
     min-height: 722px;
   }
+  .footer-site{
+    text-align: right;
+  }
+  .footer-site a{
+    transition: .3s all ease;
+  }
+  .footer-site:hover a{
+    color: #007bff;
+  }
   .reviews .col-md-10{
     padding: 0;
   }
@@ -1737,6 +1744,9 @@ body .departure-form__btn {
     padding: 21px 16px;
     font-size: 18px;
     margin-left: 15px; }
+    .footer-site{
+    text-align: right;
+  }
   body .departure-form__btn {
     padding: 21px 40px;
     margin-left: 20px;
@@ -1753,6 +1763,12 @@ body .departure-form__btn {
     width: 200px; } }
 
 @media (max-width: 1200px) {
+  body .header-gif{
+    position: absolute;
+    right: -230px;
+    bottom: 0;
+    height: 760px;
+  }
   html .section-title {
     font-size: 40px; }
   .leaders-block img {
@@ -1970,6 +1986,7 @@ body .departure-form__btn {
     padding: 20px 18px;
     margin-left: 20px; }
   .header-content {
+
     padding-top: 84px; }
   .header-subtitle {
     font-size: 18px;
@@ -2070,6 +2087,15 @@ body .departure-form__btn {
 @media (max-width: 767px) {
   .attainment-block-active{
     max-height: 5000px!important;
+  }
+  .leaders .section-title{
+    font-size: 18px;
+  }
+  .partners .section-title {
+    font-size: 18px;
+  }
+  body .advantages-block__text{
+    line-height: 19.5px;
   }
   .header-gif{
     display: none;
@@ -2785,6 +2811,9 @@ textarea {
 .footer-soc__item_l{
   margin-left: 0; 
 }
+svg path{
+  transition: .3s all ease;
+}
 svg:hover path{
   fill: #003D71!important;
 }
@@ -2824,8 +2853,9 @@ svg:hover path{
 }
 .header-gif{
   position: absolute;
-  right: 0;
+  right: -150px;
   bottom: 0;
+  height: 920px;
 }
 .mail-to{
   color: #99A8B6
@@ -2837,6 +2867,18 @@ svg:hover path{
   background-image: url(../img/pen-bg.png);
   background-position: center;
   background-repeat: no-repeat;
+}
+.contacts-text-right__item span{
+  letter-spacing: 0.03em;
+}
+.contacts-phone{
+  font-variant-numeric: lining-nums
+}
+.advantages-block__text{
+  line-height: 28px;
+}
+.header .header-title::after{
+  display: none;
 }
 /* RESPONSIVE */
 
