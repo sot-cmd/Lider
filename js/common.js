@@ -1,11 +1,6 @@
 $(document).ready(function () {
-  if ((window).innerWidth < 767) {
-    let mobile_list = $('.attainment-list-item');
-    let list_pc = $('.attainment-block-list');
-    for (let i = list_pc.length - 1; i >= 0; i--) {
-      $(mobile_list)[i].append(list_pc[i])
-    }
-  }
+  
+  new WOW().init();
   let questions_content = $('.questions-block__text');
   let questions = $('.questions-list__item');
   let attainment = $('.attainment-list-item');
