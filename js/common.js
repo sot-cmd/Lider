@@ -1,5 +1,11 @@
 $(document).ready(function () {
-  
+  if ($(window).width() < 767) {
+     $('.attainment-list-item').on('click', function() {
+       let index_element = $(this).index('.attainment-list-item');
+       let element = $('.attainment-block-list')[index_element];
+       $(this).append(element);
+     })
+  }
   new WOW().init();
   let questions_content = $('.questions-block__text');
   let questions = $('.questions-list__item');
